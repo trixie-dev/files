@@ -80,7 +80,7 @@ while True:
             print(number_temp, '/', number_all)
             u+=1
             i=random.randint(0, len(l)-1)
-            print(l[i][0])
+            cprint(l[i][0], 'green')
             o=input(': ')
             print(l[i][1])
             r=str(input())
