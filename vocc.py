@@ -3,7 +3,7 @@ import random
 from termcolor import *
 import colorama
 colorama.init()
-cprint('vocabulary v1.1', 'blue')
+cprint('vocabulary v1.2', 'blue')
 print("Виберіть пункт")
 print(' ')
 print('1 - Дієслова')
