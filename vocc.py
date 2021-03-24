@@ -4,7 +4,7 @@ from termcolor import cprint, colored
 import colorama
 import sys
 colorama.init()
-cprint('vocabulary v1.3', 'blue')
+cprint('vocabulary v1.3.1', 'blue')
 print("Виберіть пункт")
 print(' ')
 print('1 - Дієслова')
@@ -44,12 +44,12 @@ while True:
     method = colored('Method:', 'yellow')
     print(topic, end=' ')
     k=int(input())
+    if k == 0:
+        break
     print(method, end=' ')
     q=int(input())
     #database
-    if k == 0:
-        break
-    elif k==1:
+    if k==1:
         l=[['become (became, become)', 'ставати'], ['begin (began, begun)', 'починати'], ['start', 'починати'], ['continue', 'продовжувати'], ['go on (went, gone)', 'продовжувати'], ['stop', 'закінчувати, зупиняти'], ['end', 'закінчувати'], ['finish', 'закінчувати'], ['last', 'тривати'], ['accomplish', 'завершувати'], ['prepare', 'готувати'], ['postpone', 'відкладати'], ['put off (put, put)', 'відкладати'], ['divide', 'розділяти'], ['consist of', 'складатися з'], ['include', 'включати (в себе щось)'], ['exclude', 'виключати'], ['incorporate', "включати (в себе щось), об'єднуватися"], ['split (split, split)', 'розділяти на частини, розщеплювати'], ['contain', 'містити в собі)'], ['separate', 'відокремлювати'], ['assemble', 'збирати (з частин)']]
     elif k==2:
         l=[['go (went, gone)', 'йти'], ['come (came, come)', 'приходити'], ['turn', 'повертати'], ['run (ran, run)', 'бігти'], ['move', 'рухати (-ся)'], ['bring (brought, brought)', 'приносити'], ['sit (sat, sat)', 'сидіти'], ['stand', 'стояти'], ['follow', 'дотримуватися'], ['stop', 'зупиняти (-ся)'], ['walk', 'ходити гуляти)'], ['appear', "з'являтися"], ['disappear', 'зникати'], ['remain', 'залишатися'], ['leave (left, left)', 'залишати'], ['raise', 'піднімати (-ся)'], ['carry', 'нести'], ['drive (drove, driven)', 'вести машину'], ['throw (threw, trown)', 'кидати'], ['push', 'штовхати'], ['lay (laid, laid)', 'класти'], ['lie (lay, lain)', 'лежати, брехати'], ['arrive', 'прибувати'], ['shake (shook, shaken)', 'трясти'], ['fly (flew, flown)', 'літати'], ['stay', 'залишатися'], ['fall (fell, fallen)', 'падати'], ['wear (wore, worn)', 'носити (напр', ' одяг)'], ['step', 'зробити крок'], ['roll', 'котитися, згортати'], ['ride (rode, ridden)', 'їхати (напр', ' верхом)'], ['lift', 'піднімати'], ['jump', 'стрибати'], ['approach', 'наближатися'], ['cross', 'перетинати'], ['climb', 'лізти (дертися)'], ['bear (bore, born)', 'нести'], ['shift', 'зрушувати'], ['slip', 'підсковзнутися'], ['rush', 'поспішати (стрімко мчати)'], ['land', 'приземлятися'], ['escape', 'втікати'], ['drag', 'тягти'], ['slide (slid, slid)', 'ковзати'], ['toss', 'кидати (метати)'], ['accompany', 'супроводжувати'], ['swing (swang, swung)', 'розгойдувати'], ['advance', 'просуватися'], ['swim (swam, swum)', 'плисти'], ['flee', 'тікати, рятуватися втечею'], ['sink (sank, sunk)', 'тонути']]
