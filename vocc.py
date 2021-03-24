@@ -2,8 +2,9 @@
 import random
 from termcolor import cprint, colored
 import colorama
+import sys
 colorama.init()
-cprint('vocabulary v1.2.1', 'blue')
+cprint('vocabulary v1.3', 'blue')
 print("Виберіть пункт")
 print(' ')
 print('1 - Дієслова')
@@ -38,12 +39,14 @@ t=True
 #def js():
 
 while True:
+    #input
     topic = colored('Topic:', 'yellow')
     method = colored('Method:', 'yellow')
     print(topic, end=' ')
     k=int(input())
     print(method, end=' ')
     q=int(input())
+    #database
     if k == 0:
         break
     elif k==1:
@@ -72,6 +75,10 @@ while True:
         l=[['testify', 'давати свідчення'], ['justify', 'виправдовувати'], ['violate', 'порушувати'], ['witness', 'бути свідком'], ['arrest', 'заарештовувати'], ['investigate', 'розслідувати'], ['confess ', 'зізнаватися'], ['accuse', 'звинувачувати'], ['charge', 'звинувачувати (офіційно)'], ['suspect', 'підозрювати'], ['sue', 'подавати в суд'], ['convict', 'виносити вирок, визнавати винним'], ['beat (up) (beat, beaten)', 'бити, бити'], ['murder', 'вбивати'], ['kill', 'вбивати'], ['attack', 'нападати'], ['free', 'освободжать'], ['offend', 'ображати'], ['disturb', 'турбувати'], ['steal (stole, stolen)', 'красти'], ['rob', 'грабувати'], ['rape', 'гвалтувати'], ['punish', 'карати'], ['do time', 'сидіти в тюрмі)'], ['interrogate ', 'допитувати'], ['swear', 'клястися']]
     elif k == 13:
         l=[['reach', 'досягати (дотягуватися)'], ['catch (caught, caught)', 'ловити'], ['drop', 'упускати'], ['hang (hung, hung)', 'повісити'], ['touch', 'торкатися'], ['clear', 'очищати'], ['pour', 'лити (напр', ' воду)'], ['stir', 'перемішувати'], ['clean', 'чистити, прибирати (мити, приводити в порядок)'], ['wrap', 'загортати'], ['wash', 'прати (мити)'], ['ring (rang, rung)', 'дзвонити'], ['embrace', 'обіймати'], ['hug', 'обіймати'], ['put (put, put)', 'класти (поміщати)'], ['use', 'використовувати'], ['show', 'показувати'], ['hold (held, held)', 'тримати'], ['open', 'відкривати'], ['cut', 'різати'], ['pull', 'тягнути'], ['break (broke, broken)', 'ламати'], ['cover', 'прикривати'], ['draw (drew, drawn)', 'тягнути'], ['point', 'вказувати (на що-небудь)'], ['close', 'закривати'], ['replace', 'замінювати'], ['collect', 'збирати, забирати'], ['grab', 'вистачати'], ['tie', "пов'язувати"], ['press', 'тиснути'], ['link', "з'єднувати, проводити зв'язок між фактами"], ['mix', 'перемішувати'], ['stretch', 'розтягувати'], ['hand', 'подавати щось, передавати з рук в руки'], ['knock', 'стукати'], ['bend (bent, bent)', 'гнути'], ['lock', 'замикати на замок'], ['tear (tore, torn)', 'рвати'], ['pack', 'упаковувати'], ['attach', 'прикріплювати'], ['dig (dug, dug)', 'копати'], ['bind (bound, bound)', "пов'язувати (мотузкою)"], ['wind (wound, wound)', 'закручувати'], ['wipe', 'протирати'], ['load', 'завантажувати'], ['sweep (swept, swept)', 'помсти'], ['squeeze', 'стискати'], ['rub', 'терти'], ['tap', 'постукувати'], ['spin (spun, spun)', 'обертати'], ['plant', 'садити (рослина)'], ['pick', 'вибирати'], ['gather', 'збирати (разом)'], ['hide (hid, hid)', 'ховати (ся)'], ['blow (blew, blown)', 'дути'], ['smoke', 'курити'], ['act', 'діяти'], ['do (did, done)', 'робити'], ['demonstrate', 'демонструвати'], ['lean', 'притулятися, нахилятися'], ['fix', 'лагодити'], ['nod', 'кивати'], ['pose', 'позувати'], ['send (sent, sent)', 'відправляти'], ['burn (burnt, burnt)', 'спалювати'], ['shut (shut, shut)', 'закривати'], ['line (up)', 'вибудовувати в лінію'], ['arrange (the books on the shelves)', 'приводити в порядок (розставляти)'], ['install', 'встановлювати']]
+    
+
+    #defenition
+    imp=[]
     full=len(l)
     add=0
     u=0
@@ -79,6 +86,8 @@ while True:
     number_temp = 1
     number_all = len(l)
     prav = 0
+
+    #generetor
     if q==1:
         while len(l)!=0:
             print(number_temp, '/', number_all)
@@ -93,6 +102,8 @@ while True:
                 prav+=1
             elif r=='0':
                 break
+            elif r=='9':
+                imp.append(l[i])
             else:
                 add+=1
                 number_all+=1
@@ -111,11 +122,18 @@ while True:
                 l.remove(l[i])
                 prav+=1
             elif r=='0':
-                t=False
+                break
+            elif r=='9':
+                imp.append(l[i])
             else:
                 add+=1
                 number_all+=1
             print('---------------')
             number_temp+=1
+
     res = (100*prav)/(full+add)
     print(int(res), "%")
+    #out
+    sys.stdout = open("important.txt", "w")
+    sys.stdout.write(str(imp))
+    sys.stdout.close()
