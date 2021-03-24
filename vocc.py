@@ -96,7 +96,7 @@ while True:
             number_temp+=1
     else:
         while len(l)!=0:
-            print(u)
+            print(number_temp, '/', number_all)
             u+=1
             i=random.randint(0, len(l)-1)
             print(l[i][1])
@@ -109,7 +109,9 @@ while True:
             elif r=='0':
                 t=False
             else:
-            	add+=1
+                add+=1
+                number_all+=1
             print('---------------')
+            number_temp+=1
     res = (100*prav)/(full+add)
     print(int(res), "%")
