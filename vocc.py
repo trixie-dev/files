@@ -1,9 +1,9 @@
 # coding: utf8
 import random
-from termcolor import *
+from termcolor import cprint, colored
 import colorama
 colorama.init()
-cprint('vocabulary v1.2', 'blue')
+cprint('vocabulary v1.2.1', 'blue')
 print("Виберіть пункт")
 print(' ')
 print('1 - Дієслова')
@@ -38,8 +38,12 @@ t=True
 #def js():
 
 while True:
-    k=int(input('Topic: '))
-    q=int(input('Method: '))
+    topic = colored('Topic:', 'yellow')
+    method = colored('Method:', 'yellow')
+    print(topic, end=' ')
+    k=int(input())
+    print(method, end=' ')
+    q=int(input())
     if k == 0:
         break
     elif k==1:
@@ -99,7 +103,7 @@ while True:
             print(number_temp, '/', number_all)
             u+=1
             i=random.randint(0, len(l)-1)
-            print(l[i][1])
+            cprint(l[i][1], 'green')
             o=input(': ')
             print(l[i][0])
             r=str(input())
