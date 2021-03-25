@@ -330,14 +330,14 @@ while True:
                 q=10
             else:
                 q=1
-
+            k=0
         elif var == 7:
             q=input_method()
             if q==1:
                 q=10
             else:
                 q=1
-
+            k=0
         elif var == 8:
             q = 1
             k = 0
