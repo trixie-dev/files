@@ -19,7 +19,7 @@ while True:
         print(method, end=' ')
         q=int(input())
         return q
-    cprint('vocabulary v1.5.1', 'blue')
+    cprint('vocabulary v1.5.2', 'blue')
     print("Виберіть пункт")
     print(' ')
     cprint('1', 'red', end=" ") 
@@ -462,7 +462,7 @@ while True:
             print('---------------')
             number_temp+=1
 
-    res = (100*prav)/(full+add)
+    res = (100*prav)/(number_all+add)
     print(int(res), "%")
     #out
 sys.stdout = open("important.txt", "w")
