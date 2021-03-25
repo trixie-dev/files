@@ -20,7 +20,7 @@ while True:
             print(method, end=' ')
             q=int(input())
             return q
-        cprint('vocabulary v a1.6.2', 'blue')
+        cprint('vocabulary v a1.6.3', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -95,7 +95,7 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q
+            return var*q+k
         elif var == 2:
             cprint('1', 'red', end=" ") 
             print('- Мир, природа')
@@ -222,7 +222,7 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q
+            return var*q+k
         elif var == 3:
 
             cprint('1', 'red', end=" ") 
@@ -277,7 +277,7 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q
+            return var*q+k
 
         elif var == 4:
             cprint('1', 'red', end=" ") 
@@ -305,7 +305,7 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q
+            return var*q+k
         elif var == 5:
             cprint('1', 'red', end=" ") 
             print('- Предлоги места')
@@ -326,30 +326,30 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q
+            return var*q+k
         elif var == 6:
             q=input_method()
             if q==1:
                 q=10
             else:
                 q=1
-            return var*q
+            return var*q+k
         elif var == 7:
             q=input_method()
             if q==1:
                 q=10
             else:
                 q=1
-            return var*q
+            return var*q+k
         else: 
             return var
 
 
     var=intro()
-    print('clear var ',var)
+#    print('clear var ',var)
     q=0
     tiy=int(round(var, 0))
-    print('cilii var ', tiy)
+#    print('cilii var ', tiy)
     k=round((var-tiy)*1000)
     if var>=10:
         q=1
@@ -357,9 +357,9 @@ while True:
     else:
         q=2
         var = tiy
-    print('var ', var)
-    print('q ',q)
-    print('k ', k)
+#    print('var ', var)
+#    print('q ',q)
+#    print('k ', k)
     if var == 1:
         if k==1:
                 l=[['become (became, become)', 'ставати'], ['begin (began, begun)', 'починати'], ['start', 'починати'], ['continue', 'продовжувати'], ['go on (went, gone)', 'продовжувати'], ['stop', 'закінчувати, зупиняти'], ['end', 'закінчувати'], ['finish', 'закінчувати'], ['last', 'тривати'], ['accomplish', 'завершувати'], ['prepare', 'готувати'], ['postpone', 'відкладати'], ['put off (put, put)', 'відкладати'], ['divide', 'розділяти'], ['consist of', 'складатися з'], ['include', 'включати (в себе щось)'], ['exclude', 'виключати'], ['incorporate', "включати (в себе щось), об'єднуватися"], ['split (split, split)', 'розділяти на частини, розщеплювати'], ['contain', 'містити в собі)'], ['separate', 'відокремлювати'], ['assemble', 'збирати (з частин)']]
