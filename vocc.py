@@ -20,7 +20,7 @@ while True:
             print(method, end=' ')
             q=int(input())
             return q
-        cprint('vocabulary v a1.6.1', 'blue')
+        cprint('vocabulary v a1.6.2', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -526,13 +526,13 @@ while True:
 
     elif var == 8:
         print()
-        cprint('"Topic: " напиши номер теми', 'green', attrs=['reverse'])
-        cprint('Якщо ввести 0, програма зупинеться', 'green', attrs=['reverse'])
+        cprint('"Topic: " напиши номер теми', 'green')
+        cprint('Якщо ввести 0, програма зупинеться', 'green')
         print()
-        cprint('"Method:" спосіб виконання. 1 англ-укр; 2 укр-англ', 'green', attrs=['reverse'])
+        cprint('"Method:" спосіб виконання. 1 англ-укр; 2 укр-англ', 'green')
         print()
-        cprint('Якщо правильно, натисни Enter, якщо ні - введи будь-який символ', 'green', attrs=['reverse'])
-        cprint('Якщо ввести 0, програма почнеться спочатку', 'green', attrs=['reverse'])
+        cprint('Якщо правильно, натисни Enter, якщо ні - введи будь-який символ', 'green')
+        cprint('Якщо ввести 0, програма почнеться спочатку', 'green')
         print()
         intro()
     
