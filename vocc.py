@@ -95,7 +95,6 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q+k
         elif var == 2:
             cprint('1', 'red', end=" ") 
             print('- Мир, природа')
@@ -222,7 +221,6 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q+k
         elif var == 3:
 
             cprint('1', 'red', end=" ") 
@@ -277,7 +275,6 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q+k
 
         elif var == 4:
             cprint('1', 'red', end=" ") 
@@ -305,7 +302,7 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q+k
+
         elif var == 5:
             cprint('1', 'red', end=" ") 
             print('- Предлоги места')
@@ -326,23 +323,22 @@ while True:
             else:
                 q=1
             k/=1000
-            return var*q+k
+
         elif var == 6:
             q=input_method()
             if q==1:
                 q=10
             else:
                 q=1
-            return var*q+k
+
         elif var == 7:
             q=input_method()
             if q==1:
                 q=10
             else:
                 q=1
-            return var*q+k
-        else: 
-            return var
+        
+        return var*q+k
 
 
     var=intro()
