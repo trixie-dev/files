@@ -337,6 +337,10 @@ while True:
                 q=10
             else:
                 q=1
+
+        elif var == 8:
+            q = 1
+            k = 0
         
         return var*q+k
 
