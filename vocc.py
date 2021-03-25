@@ -20,7 +20,7 @@ while True:
             print(method, end=' ')
             q=int(input())
             return q
-        cprint('vocabulary v1.5.3', 'blue')
+        cprint('vocabulary v1.5.4', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -401,8 +401,10 @@ while True:
     var=intro()
     if var == 8:
         cprint('"Topic: " напиши номер теми', attrs=['reverse'])
+        cprint('Якщо ввести 0, програма зупинеться', attrs=['reverse'])
         cprint('"Method:" спосіб виконання. 1 англ-укр; 2 укр-англ', attrs=['reverse'])
-        cprint('Якщо правильно, натисни ентер, якщо ні введи якийся символ', attrs=['reverse'])
+        cprint('Якщо правильно, натисни Enter, якщо ні - введи будь-який символ', attrs=['reverse'])
+        cprint('Якщо ввести 0, програма почнеться спочатку', attrs=['reverse'])
         intro()
 
 
