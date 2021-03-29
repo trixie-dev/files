@@ -618,6 +618,7 @@ while True:
                     out_numb = int(input())
                     out_i-=1
 
+                number_all+=1
                 imp.append(l[i])
             elif r=='com':
                 cprint("Text for comment:", 'yellow', end=" ")
@@ -653,6 +654,7 @@ while True:
                     out_numb = int(input())
                     out_i-=1
 
+                number_all+=1
                 imp.append(l[i])
             elif r=='com':
                 cprint("Text for comment:", 'yellow', end=" ")
