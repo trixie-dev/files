@@ -3,9 +3,14 @@ import random
 from termcolor import cprint, colored
 import colorama
 import sys
+import time
+
 colorama.init()
 t = True
 imp=[]
+out_i=1
+
+
 while True:
     def intro():
         def input_topic():
@@ -20,7 +25,9 @@ while True:
             print(method, end=' ')
             q=int(input())
             return q
-        cprint('vocabulary v a1.7.1', 'blue')
+
+        #text
+        cprint('vocabulary v a1.7.2', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -51,7 +58,12 @@ while True:
         print('- Інструкція')
         
         var=int(input(': '))
-        if var == 1:
+        if var == 0:
+            if len(imp)>0:
+                print(out_numb, '\n', imp, file=open("data.txt", "w"))
+            quit()
+
+        elif var == 1:
             cprint('1', 'red', end=" ") 
             print('- Этапы действия, часть и целое')
 
@@ -588,6 +600,11 @@ while True:
             i=random.randint(0, len(l)-1)
             cprint(l[i][0], 'green')
             o=input(': ')
+            if o=='com':
+                cprint("Text for comment:", 'yellow', end=" ")
+                comment=str(input())
+                print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
+            
             print(l[i][1])
             r=str(input())
             if r=='':
@@ -596,7 +613,16 @@ while True:
             elif r=='0':
                 break
             elif r=='9':
+                if out_i == 1:
+                    cprint("Number of commit:", 'yellow', end=" ")
+                    out_numb = int(input())
+                    out_i-=1
+
                 imp.append(l[i])
+            elif r=='com':
+                cprint("Text for comment:", 'yellow', end=" ")
+                comment=str(input())
+                print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
             else:
                 add+=1
                 number_all+=1
@@ -609,6 +635,11 @@ while True:
             i=random.randint(0, len(l)-1)
             cprint(l[i][1], 'green')
             o=input(': ')
+            if o=='com':
+                cprint("Text for comment:", 'yellow', end=" ")
+                comment=str(input())
+                print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
+            
             print(l[i][0])
             r=str(input())
             if r=='':
@@ -617,7 +648,17 @@ while True:
             elif r=='0':
                 break
             elif r=='9':
+                if out_i == 1:
+                    cprint("Number of commit:", 'yellow', end=" ")
+                    out_numb = int(input())
+                    out_i-=1
+
                 imp.append(l[i])
+            elif r=='com':
+                cprint("Text for comment:", 'yellow', end=" ")
+                comment=str(input())
+                print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
+            
             else:
                 add+=1
                 number_all+=1
@@ -626,7 +667,3 @@ while True:
 
     res = (100*prav)/(number_all+add)
     print(int(res), "%")
-    #out
-sys.stdout = open("important.txt", "w")
-sys.stdout.write(str(imp))
-sys.stdout.close()
