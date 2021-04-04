@@ -27,7 +27,7 @@ while True:
             return q
 
         #text
-        cprint('vocabulary v a1.7.2', 'blue')
+        cprint('vocabulary v a1.8', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -393,6 +393,9 @@ while True:
     #print('var ', var)
     #print('q ',q)
     #print('k ', k)
+    #print()
+   
+
     if var == 1:
         if k==1:
                 l=[['become (became, become)', 'ставати'], ['begin (began, begun)', 'починати'], ['start', 'починати'], ['continue', 'продовжувати'], ['go on (went, gone)', 'продовжувати'], ['stop', 'закінчувати, зупиняти'], ['end', 'закінчувати'], ['finish', 'закінчувати'], ['last', 'тривати'], ['accomplish', 'завершувати'], ['prepare', 'готувати'], ['postpone', 'відкладати'], ['put off (put, put)', 'відкладати'], ['divide', 'розділяти'], ['consist of', 'складатися з'], ['include', 'включати (в себе щось)'], ['exclude', 'виключати'], ['incorporate', "включати (в себе щось), об'єднуватися"], ['split (split, split)', 'розділяти на частини, розщеплювати'], ['contain', 'містити в собі)'], ['separate', 'відокремлювати'], ['assemble', 'збирати (з частин)']]
@@ -576,8 +579,20 @@ while True:
         print()
         intro()
     
-
-
+    cprint("Start/end:", 'yellow', end=" ")
+    try:
+        rrange, start, end=map(int, input().split(' '))
+        if rrange == 1:
+            l=l[start:end+1]
+        else:
+            lenght=(end+1)-start
+            ite=len(l)
+            while ite > lenght:
+                num=random.randint(0, len(l)-1)
+                l.remove(l[num])
+                ite-=1
+    except ValueError:
+        l=l
     #input
     
     #database    
