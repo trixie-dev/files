@@ -27,7 +27,7 @@ while True:
             return q
 
         #text
-        cprint('vocabulary v a1.8', 'blue')
+        cprint('vocabulary v b1.8.1', 'blue')
         print("Виберіть пункт")
         print(' ')
         cprint('1', 'red', end=" ") 
@@ -574,6 +574,14 @@ while True:
         print()
         cprint('"Method:" спосіб виконання. 1 англ-укр; 2 укр-англ', 'green')
         print()
+
+        cprint('"Start/end:" Якщо треба перевірити не всі слова, а частину. ', 'green', end=" ")
+        cprint("Можна просто пропустити, натиснувши","green", end=" ")
+        cprint("Enter", "red")
+        cprint('Форма запису: "Start/end: 1 20 40", де 1 - вибір слів, що йде по порядку в списку(2 - слова вибрані рандомно з списку),', 'green')
+        cprint('20 - початок, 40 - кінець', 'green')
+        print()
+        cprint("Спочатку йде слово, треба натиснути Enter, потім перевірити результат","green")
         cprint('Якщо правильно, натисни Enter, якщо ні - введи будь-який символ', 'green')
         cprint('Якщо ввести 0, програма почнеться спочатку', 'green')
         print()
