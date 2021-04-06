@@ -665,7 +665,7 @@ while True:
                     add+=1
                     number_all+=1
                     print("\033c", end="")
-                print('---------------')
+
                 number_temp+=1
         else:
             while len(l)!=0:
