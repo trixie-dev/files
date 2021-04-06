@@ -58,6 +58,7 @@ while True:
                 print("\033c", end="")
             else:
                 k+=1
+                lenght+=1
                 print("\033c", end="")
             ite+=1
         res = (100*prav)/k
