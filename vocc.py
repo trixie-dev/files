@@ -10,7 +10,6 @@ t = True
 imp=[]
 out_i=1
 
-
 while True:
     def intro():
         def input_topic():
