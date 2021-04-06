@@ -13,7 +13,7 @@ add=0
 prav=0
 
 while True:
-    cprint("all_demo a1.0", "blue")
+    cprint("all_demo a1.1", "blue")
     print()
     cprint('1', 'red', end=" ") 
     print( '- наголоси')
@@ -52,9 +52,7 @@ while True:
                 prav += 1
                 print("\033c", end="")
             elif r=='0':
-                imp.append(l[i])
-                i=random.randint(0, len(l)-1)
-                k+=1
+                break
                 print("\033c", end="")
             else:
                 k+=1
@@ -63,7 +61,6 @@ while True:
             ite+=1
         res = (100*prav)/k
         print(int(res), "%")
-        print("\033c", end="")
         pause=input()
         
         print("\033c", end="")
@@ -686,7 +683,7 @@ while True:
                     comment=str(input())
                     print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
                 
-                    print(l[i][1])
+                print(l[i][1])
                 r=str(input())
                 if r=='':
                     l.remove(l[i])
