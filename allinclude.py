@@ -11,7 +11,7 @@ imp=[]
 out_i=1
 
 while True:
-    cprint("allinclude a1.0", "blue")
+    cprint("allinclude a1.1", "blue")
     print()
     cprint('1', 'red', end=" ") 
     print( '- наголоси')
@@ -620,7 +620,7 @@ while True:
 
         #defenition
      
-        
+        print("\033c", end="")
         add=0
         u=0
         u=1
