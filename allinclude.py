@@ -644,6 +644,7 @@ while True:
                 if r=='':
                     l.remove(l[i])
                     prav+=1
+                    print("\033c", end="")
                 elif r=='0':
                     break
                 elif r=='9':
@@ -654,13 +655,16 @@ while True:
 
                     number_all+=1
                     imp.append(l[i])
+                    print("\033c", end="")
                 elif r=='com':
                     cprint("Text for comment:", 'yellow', end=" ")
                     comment=str(input())
                     print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
+                    print("\033c", end="")
                 else:
                     add+=1
                     number_all+=1
+                    print("\033c", end="")
                 print('---------------')
                 number_temp+=1
         else:
