@@ -38,6 +38,7 @@ while True:
                 return q
 
             #text
+
             cprint('vocabulary v b1.8.1', 'blue')
             print("Виберіть пункт")
             print(' ')
@@ -69,6 +70,7 @@ while True:
             print('- Інструкція')
             
             var=int(input(': '))
+            print("\033c", end="")
             if var == 0:
                 if len(imp)>0:
                     print(out_numb, '\n', imp, file=open("data.txt", "w"))
