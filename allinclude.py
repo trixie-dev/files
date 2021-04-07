@@ -14,22 +14,24 @@ add=0
 prav=0
 def clear():
     if platform.system()=="Windows":
-        subprocess.Popen("cls", shell=True).communicate() #I like to use this instead of subprocess.call since for multi-word commands you can just type it out, granted this is just cls and subprocess.call should work fine 
+        subprocess.Popen("cls", shell=True).communicate() #I like to use this instead of subprocess.call since for multi-word commands you can just type it out, granted this is just cls and subprocess.call should work fine
     else: #Linux and Mac
         print("\033c", end="")
 while True:
     cprint("all_demo a1.1", "blue")
     print()
-    cprint('1', 'red', end=" ") 
+    cprint('1', 'red', end=" ")
     print( '- словник')
-    cprint('2', 'red', end=" ") 
+    cprint('2', 'red', end=" ")
     print( '- наголоси')
-    cprint('3', 'red', end=" ") 
+    cprint('3', 'red', end=" ")
     print( '- лексичні помилки')
-
+    print(": ", end=" ")
     main_menu_choice = int(input())
     clear()
-    if main_menu_choice==1:
+    if main_menu_choice==0:
+        break
+    elif main_menu_choice==1:
         def intro():
             def input_topic():
                 topic = colored('Topic:', 'yellow')
@@ -49,10 +51,10 @@ while True:
             cprint('vocabulary v b1.8.1', 'blue')
             print("Виберіть пункт")
             print(' ')
-            cprint('1', 'red', end=" ") 
+            cprint('1', 'red', end=" ")
             print( '- Дієслова')
 
-            cprint('2', 'red', end=" ") 
+            cprint('2', 'red', end=" ")
             print('- Іменник')
 
             cprint('3', 'red', end=" ")
@@ -75,7 +77,7 @@ while True:
 
             cprint('9', 'red', end=" ")
             print('- Інструкція')
-            
+
             var=int(input(': '))
             clear()
             if var == 0:
@@ -84,43 +86,43 @@ while True:
                 quit()
 
             elif var == 1:
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- Этапы действия, часть и целое')
 
-                cprint('2', 'red', end=" ") 
+                cprint('2', 'red', end=" ")
                 print('- Движение')
 
-                cprint('3', 'red', end=" ") 
+                cprint('3', 'red', end=" ")
                 print('- Наличие\отсутствие, принадлежность')
 
-                cprint('4', 'red', end=" ") 
+                cprint('4', 'red', end=" ")
                 print('- Работа, сотрудничество')
 
-                cprint('5', 'red', end=" ") 
+                cprint('5', 'red', end=" ")
                 print('- Чувства')
-                
-                cprint('6', 'red', end=" ") 
+
+                cprint('6', 'red', end=" ")
                 print('- Общение')
 
-                cprint('7', 'red', end=" ") 
+                cprint('7', 'red', end=" ")
                 print('- Борьба')
 
-                cprint('8', 'red', end=" ") 
+                cprint('8', 'red', end=" ")
                 print('- Экономика')
 
-                cprint('9', 'red', end=" ") 
+                cprint('9', 'red', end=" ")
                 print('- Человек')
 
-                cprint('10', 'red', end=" ") 
+                cprint('10', 'red', end=" ")
                 print('- Дом, быт, развлечение')
 
-                cprint('11', 'red', end=" ") 
+                cprint('11', 'red', end=" ")
                 print('- Физическое действие(общие)')
 
-                cprint('12', 'red', end=" ") 
+                cprint('12', 'red', end=" ")
                 print('- Закон')
 
-                cprint('13', 'red', end=" ") 
+                cprint('13', 'red', end=" ")
                 print('- Физическое действие(человека)')
 
                 k=input_topic()
@@ -131,124 +133,124 @@ while True:
                     q=1
                 k/=1000
             elif var == 2:
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- Мир, природа')
 
-                cprint('2', 'red', end=" ") 
+                cprint('2', 'red', end=" ")
                 print('- Животные, растения')
 
-                cprint('3', 'red', end=" ") 
+                cprint('3', 'red', end=" ")
                 print('- Время')
 
-                cprint('4', 'red', end=" ") 
+                cprint('4', 'red', end=" ")
                 print('- Человек: жизнь')
 
-                cprint('5', 'red', end=" ") 
+                cprint('5', 'red', end=" ")
                 print('- Человек: личность')
 
-                cprint('6', 'red', end=" ") 
+                cprint('6', 'red', end=" ")
                 print('- Человек: анатомия')
 
-                cprint('7', 'red', end=" ") 
+                cprint('7', 'red', end=" ")
                 print('- Математика')
 
-                cprint('8', 'red', end=" ") 
+                cprint('8', 'red', end=" ")
                 print('- Физические явления, характеристики')
 
-                cprint('9', 'red', end=" ") 
+                cprint('9', 'red', end=" ")
                 print('- Материалы')
 
-                cprint('10', 'red', end=" ") 
+                cprint('10', 'red', end=" ")
                 print('- Техника')
 
-                cprint('11', 'red', end=" ") 
+                cprint('11', 'red', end=" ")
                 print('- Пространство')
 
-                cprint('12', 'red', end=" ") 
+                cprint('12', 'red', end=" ")
                 print('- Логика')
 
-                cprint('13', 'red', end=" ") 
+                cprint('13', 'red', end=" ")
                 print('- Мышление')
 
-                cprint('14', 'red', end=" ") 
+                cprint('14', 'red', end=" ")
                 print('- Психология, чувства')
 
-                cprint('15', 'red', end=" ") 
+                cprint('15', 'red', end=" ")
                 print('- Семья')
 
-                cprint('16', 'red', end=" ") 
+                cprint('16', 'red', end=" ")
                 print('- Взаимоотношения')
 
-                cprint('17', 'red', end=" ") 
+                cprint('17', 'red', end=" ")
                 print('- Сотрудничество')
 
-                cprint('18', 'red', end=" ") 
+                cprint('18', 'red', end=" ")
                 print('- Живопись, фотография')
 
-                cprint('19', 'red', end=" ") 
+                cprint('19', 'red', end=" ")
                 print('- Кино, театр, музыка')
 
-                cprint('20', 'red', end=" ") 
+                cprint('20', 'red', end=" ")
                 print('- Литература')
 
-                cprint('21', 'red', end=" ") 
+                cprint('21', 'red', end=" ")
                 print('- Религия')
 
-                cprint('22', 'red', end=" ") 
+                cprint('22', 'red', end=" ")
                 print('- Спорт')
 
-                cprint('23', 'red', end=" ") 
+                cprint('23', 'red', end=" ")
                 print('- Общение')
 
-                cprint('24', 'red', end=" ") 
+                cprint('24', 'red', end=" ")
                 print('- Учеба')
 
-                cprint('25', 'red', end=" ") 
+                cprint('25', 'red', end=" ")
                 print('- Наука')
 
-                cprint('26', 'red', end=" ") 
+                cprint('26', 'red', end=" ")
                 print('- Государство и общество')
 
-                cprint('27', 'red', end=" ") 
+                cprint('27', 'red', end=" ")
                 print('- Армия')
 
-                cprint('28', 'red', end=" ") 
+                cprint('28', 'red', end=" ")
                 print('- Экономика, бизнес')
 
-                cprint('29', 'red', end=" ") 
+                cprint('29', 'red', end=" ")
                 print('- Промышленность')
 
-                cprint('30', 'red', end=" ") 
+                cprint('30', 'red', end=" ")
                 print('- Работа, карьера')
 
-                cprint('31', 'red', end=" ") 
+                cprint('31', 'red', end=" ")
                 print('- Профессии, должности')
 
-                cprint('32', 'red', end=" ") 
+                cprint('32', 'red', end=" ")
                 print('- Город')
 
-                cprint('33', 'red', end=" ") 
+                cprint('33', 'red', end=" ")
                 print('- Транспорт')
 
-                cprint('34', 'red', end=" ") 
+                cprint('34', 'red', end=" ")
                 print('- Закон')
 
-                cprint('35', 'red', end=" ") 
+                cprint('35', 'red', end=" ")
                 print('- Дом, быт')
 
-                cprint('36', 'red', end=" ") 
+                cprint('36', 'red', end=" ")
                 print('- Еда')
 
-                cprint('37', 'red', end=" ") 
+                cprint('37', 'red', end=" ")
                 print('- Одежда')
 
-                cprint('38', 'red', end=" ") 
+                cprint('38', 'red', end=" ")
                 print('- Медицина')
 
-                cprint('39', 'red', end=" ") 
+                cprint('39', 'red', end=" ")
                 print('- Информационные технологии')
 
-                
+
                 k=input_topic()
                 q=input_method()
                 if q==1:
@@ -258,49 +260,49 @@ while True:
                 k/=1000
             elif var == 3:
 
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- Время')
 
-                cprint('2', 'red', end=" ") 
+                cprint('2', 'red', end=" ")
                 print('- Человек')
-                
-                cprint('3', 'red', end=" ") 
+
+                cprint('3', 'red', end=" ")
                 print('- Мораль, поведение')
 
-                cprint('4', 'red', end=" ") 
+                cprint('4', 'red', end=" ")
                 print('- Разнообразие')
 
-                cprint('5', 'red', end=" ") 
+                cprint('5', 'red', end=" ")
                 print('- Ощущения, логика')
 
-                cprint('6', 'red', end=" ") 
+                cprint('6', 'red', end=" ")
                 print('- Качество')
-                
-                cprint('7', 'red', end=" ") 
+
+                cprint('7', 'red', end=" ")
                 print('- Размер, форма')
 
-                cprint('8', 'red', end=" ") 
+                cprint('8', 'red', end=" ")
                 print('- Физические качества')
 
-                cprint('9', 'red', end=" ") 
+                cprint('9', 'red', end=" ")
                 print('- Деньги, количество')
 
-                cprint('10', 'red', end=" ") 
+                cprint('10', 'red', end=" ")
                 print('- Важность, вероятность')
-                
-                cprint('11', 'red', end=" ") 
+
+                cprint('11', 'red', end=" ")
                 print('- Государство и общество')
 
-                cprint('12', 'red', end=" ") 
+                cprint('12', 'red', end=" ")
                 print('- Трудный\легкий, обычный\необычный')
 
-                cprint('13', 'red', end=" ") 
+                cprint('13', 'red', end=" ")
                 print('- Пространство и природа')
 
-                cprint('14', 'red', end=" ") 
+                cprint('14', 'red', end=" ")
                 print('- Наука, искусство')
-                
-                cprint('15', 'red', end=" ") 
+
+                cprint('15', 'red', end=" ")
                 print('- Цвета')
 
                 k=input_topic()
@@ -312,22 +314,22 @@ while True:
                 k/=1000
 
             elif var == 4:
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- Наречия времени')
 
-                cprint('2', 'red', end=" ") 
+                cprint('2', 'red', end=" ")
                 print('- Образа действия')
 
-                cprint('3', 'red', end=" ") 
+                cprint('3', 'red', end=" ")
                 print('- Места')
 
-                cprint('4', 'red', end=" ") 
+                cprint('4', 'red', end=" ")
                 print('- Количества')
 
-                cprint('5', 'red', end=" ") 
+                cprint('5', 'red', end=" ")
                 print('- Меры, степени')
 
-                cprint('6', 'red', end=" ") 
+                cprint('6', 'red', end=" ")
                 print('- Вводные и соединительные слова')
 
                 k=input_topic()
@@ -339,16 +341,16 @@ while True:
                 k/=1000
 
             elif var == 5:
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- Предлоги места')
 
-                cprint('2', 'red', end=" ") 
+                cprint('2', 'red', end=" ")
                 print('- Предлоги времени')
 
-                cprint('3', 'red', end=" ") 
+                cprint('3', 'red', end=" ")
                 print('- Предлоги направления')
 
-                cprint('4', 'red', end=" ") 
+                cprint('4', 'red', end=" ")
                 print('- Разные предлоги')
 
                 k=input_topic()
@@ -366,7 +368,7 @@ while True:
                 else:
                     q=1
                 k=0
-            
+
             elif var == 7:
                 q=input_method()
                 if q==1:
@@ -374,13 +376,13 @@ while True:
                 else:
                     q=1
                 k=0
-            
+
             elif var == 8:
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- 1 - 30')
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- 31 - 60')
-                cprint('1', 'red', end=" ") 
+                cprint('1', 'red', end=" ")
                 print('- 61 - 90')
                 k=input_topic()
                 q=input_method()
@@ -394,7 +396,7 @@ while True:
             elif var == 9:
                 q = 1
                 k = 0
-            
+
             return var*q+k
 
 
@@ -414,7 +416,7 @@ while True:
         #print('q ',q)
         #print('k ', k)
         #print()
-       
+
 
         if var == 1:
             if k==1:
@@ -606,7 +608,7 @@ while True:
             cprint('Якщо ввести 0, програма почнеться спочатку', 'green')
             print()
             intro()
-        
+
         cprint("Start/end:", 'yellow', end=" ")
         try:
             rrange, start, end=map(int, input().split(' '))
@@ -622,11 +624,11 @@ while True:
         except ValueError:
             l=l
         #input
-        
-        #database    
+
+        #database
 
         #defenition
-     
+
         clear()
         add=0
         u=0
@@ -647,7 +649,7 @@ while True:
                     cprint("Text for comment:", 'yellow', end=" ")
                     comment=str(input())
                     print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
-                
+
                 print(l[i][1])
                 r=str(input())
                 if r=='':
@@ -688,7 +690,7 @@ while True:
                     cprint("Text for comment:", 'yellow', end=" ")
                     comment=str(input())
                     print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
-                
+
                 print(l[i][0])
                 r=str(input())
                 if r=='':
@@ -712,12 +714,12 @@ while True:
                     comment=str(input())
                     print(' ', comment, '\n', '\n', time.ctime(), file=open("log.txt", "w"))
                     clear()
-                
+
                 else:
                     add+=1
                     number_all+=1
                     clear()
-                
+
                 number_temp+=1
 
         res = (100*prav)/(number_all+add)
@@ -763,7 +765,6 @@ while True:
         res = (100*prav)/k
         print(int(res), "%")
         pause=input()
-        
+
         clear()
-    
-    
+    clear()
