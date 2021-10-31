@@ -1,8 +1,17 @@
 import random
 import subprocess, platform
 
+
+
 pop = []
 numb = 0
+
+def clear():
+    if platform.system()=="Windows":
+        subprocess.Popen("cls", shell=True).communicate() #I like to use this instead of subprocess.call since for multi-word commands you can just type it out, granted this is just cls and subprocess.call should work fine
+    else: #Linux and Mac
+        print("\033c", end="")
+
 
 def main():
     #x = int(input("number: "))
@@ -54,7 +63,7 @@ def life(x):
 main()
 i = 1
 while numb != 0:
-    subprocess.Popen("cls", shell=True).communicate()
+    clear()
     pop = []
     numb = 0
     main()
